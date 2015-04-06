@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".BracketScreen"
+            android:label="Get Bracket"
+            android:theme="@style/AppTheme" />
+        
+        <activity android:name=".SingleElimination"
+            android:label="Get Single Elimination"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".HelpScreen"
+            android:label="Get Help Screen"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>
