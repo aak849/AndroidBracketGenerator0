@@ -22,6 +22,8 @@ public class SingleElimination extends Activity{
 
         else if(selectedNumber.equalsIgnoreCase("8"))
             setContentView(R.layout.bracket8);
+        else if(selectedNumber.equalsIgnoreCase("4"))
+            setContentView(R.layout.bracket4);
         else
             setContentView(R.layout.single_elimination_layout);
 

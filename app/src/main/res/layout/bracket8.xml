@@ -6,7 +6,16 @@
     android:orientation="vertical" tools:context=".MainActivity"
     android:id="@+id/b8">
 
-
+    <TextView
+        android:id="@+id/single_elimination_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="single elimination bracket"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <View
         android:layout_width="@dimen/horizontal_bracket_16_length"

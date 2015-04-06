@@ -20,4 +20,7 @@
     <string name="enter_number_of_players_button_text">Enter</string>
     <string name="number_of_players_text">Number of Players:</string>
     <string name="help_view">How to Use</string>
+    <string name="help_description">Welcome to bracketApp! Not only is the lack of a clever name a work in progress, but this app is definitely one too. Here, you will
+                                    find the help description. But first, we have to help ourselves! Its true what the flight attendants tell you. First secure the oxygen mask on
+                                    yourself, and then assist others.</string>
 </resources>
