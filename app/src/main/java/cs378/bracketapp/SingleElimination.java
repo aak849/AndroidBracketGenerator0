@@ -19,6 +19,9 @@ public class SingleElimination extends Activity{
             Log.d(TAG, "selectedNumber =" + selectedNumber);
             setContentView(R.layout.bracket16);
         }
+
+        else if(selectedNumber.equalsIgnoreCase("8"))
+            setContentView(R.layout.bracket8);
         else
             setContentView(R.layout.single_elimination_layout);
 
