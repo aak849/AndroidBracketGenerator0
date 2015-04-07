@@ -2,7 +2,6 @@
     <string name="app_name">BracketApp</string>
 
     <string-array name="number_of_players_array">
-        <item></item>
         <item>4</item>
         <item>8</item>
         <item>16</item>

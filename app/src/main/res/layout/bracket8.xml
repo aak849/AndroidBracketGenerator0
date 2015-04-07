@@ -376,7 +376,8 @@
         android:layout_alignTop="@+id/view18"
         android:layout_toRightOf="@+id/view18"
         android:layout_toEndOf="@+id/view18"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:id="@+id/view50" />
 
 
     <View
@@ -394,7 +395,8 @@
         android:background="#000000"
         android:layout_alignTop="@+id/view25"
         android:layout_toRightOf="@+id/view25"
-        android:layout_toEndOf="@+id/view25" />
+        android:layout_toEndOf="@+id/view25"
+        android:id="@+id/view48" />
 
     <View
         android:layout_width="@dimen/horizontal_bracket_16_length"
@@ -413,7 +415,8 @@
         android:layout_alignTop="@+id/view25"
         android:layout_toRightOf="@+id/view25"
         android:layout_toEndOf="@+id/view25"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:id="@+id/view49" />
 
     <View
         android:layout_width="1dip"
@@ -421,7 +424,8 @@
         android:background="#000000"
         android:layout_alignTop="@+id/view26"
         android:layout_toRightOf="@+id/view26"
-        android:layout_toEndOf="@+id/view26" />
+        android:layout_toEndOf="@+id/view26"
+        android:id="@+id/view47" />
 
     <View
         android:layout_width="@dimen/horizontal_bracket_16_length"
@@ -504,6 +508,73 @@
         android:layout_alignBottom="@+id/view33"
         android:layout_alignLeft="@+id/view34"
         android:layout_alignStart="@+id/view34" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText16"
+        android:layout_above="@+id/view30"
+        android:layout_alignLeft="@+id/view33"
+        android:layout_alignStart="@+id/view33"
+        android:layout_toLeftOf="@+id/view30"
+        android:layout_toStartOf="@+id/view30" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText17"
+        android:layout_alignBottom="@+id/view30"
+        android:layout_toRightOf="@+id/view22"
+        android:layout_toLeftOf="@+id/view30"
+        android:layout_toStartOf="@+id/view30" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText18"
+        android:layout_above="@+id/view49"
+        android:layout_toRightOf="@+id/view32"
+        android:layout_toLeftOf="@+id/view48"
+        android:layout_toStartOf="@+id/view48" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText19"
+        android:layout_below="@+id/view8"
+        android:layout_toLeftOf="@+id/view48"
+        android:layout_toRightOf="@+id/view33"
+        android:layout_toEndOf="@+id/view33" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText20"
+        android:layout_above="@+id/view31"
+        android:layout_alignLeft="@+id/view30"
+        android:layout_alignStart="@+id/view30"
+        android:layout_toLeftOf="@+id/view47"
+        android:layout_toStartOf="@+id/view47" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText21"
+        android:layout_alignBottom="@+id/view47"
+        android:layout_alignLeft="@+id/view48"
+        android:layout_alignStart="@+id/view48"
+        android:layout_toLeftOf="@+id/view47"
+        android:layout_toStartOf="@+id/view47" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText22"
+        android:layout_below="@+id/view4"
+        android:layout_alignLeft="@+id/view47"
+        android:layout_alignStart="@+id/view47"
+        android:layout_alignRight="@+id/view31"
+        android:layout_alignEnd="@+id/view31" />
 
 
 </RelativeLayout>
