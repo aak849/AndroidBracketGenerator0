@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".PlayerManager"
+            android:label="Set Player Name"
+            android:theme="@style/AppTheme"/>
+
         <activity android:name=".BracketScreen"
             android:label="Get Bracket"
             android:theme="@style/AppTheme" />

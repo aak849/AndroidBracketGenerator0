@@ -4,14 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.internal.widget.AdapterViewCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
-public class BracketScreen extends Activity implements AdapterView.OnItemSelectedListener {
+public class BracketScreen extends Activity {
     Spinner single_elimination_spinner;
     Spinner other_spinner;
+    private static final String TAG = "MyActivity";
+
     //Spinner spinner;
     int check = 0;
 
@@ -26,7 +30,7 @@ public class BracketScreen extends Activity implements AdapterView.OnItemSelecte
                 android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         single_elimination_spinner.setAdapter(adapter);
-        single_elimination_spinner.setOnItemSelectedListener(this);
+        //single_elimination_spinner.setOnItemSelectedListener(this);
 
         //now send selected item to another activity
         /*
@@ -76,19 +80,27 @@ public class BracketScreen extends Activity implements AdapterView.OnItemSelecte
 
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        if(check>0) {
-            Intent intent = new Intent(getApplicationContext(), SingleElimination.class);
-            intent.putExtra("selected", single_elimination_spinner.getSelectedItem().toString());
-            if(single_elimination_spinner.getSelectedItem().toString() != "")
-                startActivity(intent);
-        }
-        check++;
+//    @Override
+    public void onSendBracketInformation( View view) {
+//        if(check>0) {
+//            Intent intent = new Intent(getApplicationContext(), SingleElimination.class);
+//            intent.putExtra("selected", single_elimination_spinner.getSelectedItem().toString());
+//            if(single_elimination_spinner.getSelectedItem().toString() != "")
+//                startActivity(intent);
+            Log.d(TAG, "onSendBracketInfo called");
+            Intent getPlayerManagerIntent = new Intent(this, PlayerManager.class);
+            Spinner editPlayerNumber = (Spinner) findViewById(R.id.single_elimination_number_of_players_spinner);
+            int numOfPlayers = Integer.parseInt(editPlayerNumber.getSelectedItem().toString());
+            getPlayerManagerIntent.putExtra("numberOfPlayers", numOfPlayers);
+            Log.d(TAG, "startActivity playerManager");
+
+            startActivity(getPlayerManagerIntent);
+//        }
+//        check++;
     }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
+//    @Override
+//    public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//    }
 }
