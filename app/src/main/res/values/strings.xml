@@ -6,7 +6,6 @@
         <item>4</item>
         <item>8</item>
         <item>16</item>
-        <item>32</item>
     </string-array>
 
     <string-array name="not_supported_array">
@@ -20,9 +19,9 @@
     <string name="enter_number_of_players_button_text">Enter</string>
     <string name="number_of_players_text">Number of Players:</string>
     <string name="help_view">How to Use</string>
-    <string name="help_description">Welcome to bracketApp! Not only is the lack of a clever name a work in progress, but this app is definitely one too. Here, you will
-                                    find the help description. But first, we have to help ourselves! Its true what the flight attendants tell you. First secure the oxygen mask on
-                                    yourself, and then assist others.</string>
+    <string name="help_description">Welcome to bracketApp! Not only is the lack of a clever name a work in progress, but this app is definitely one too. Nonetheless, you
+                                    are currently able to construct a bracket size of 16, 8, or 4 and place the names of the players at the first part of the bracket. While this
+                                    may not be much, it is a great starting point for an app we hope to account for most (if not all) of your tournament organizing needs.</string>
 
     <string name="enter_player_names">Enter Player Names</string>
     <string name="enter">Enter</string>
