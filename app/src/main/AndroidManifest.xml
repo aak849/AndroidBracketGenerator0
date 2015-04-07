@@ -13,7 +13,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
 
@@ -32,6 +32,16 @@
         <activity android:name=".HelpScreen"
             android:label="Get Help Screen"
             android:theme="@style/AppTheme" />
+        <!-- Splash screen -->
+        <activity android:name=".Splash"
+            android:label="Get Splash Screen"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
 
     </application>
 
