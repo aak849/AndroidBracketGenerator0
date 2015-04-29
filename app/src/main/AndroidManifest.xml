@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cs378.bracketapp" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,36 +15,40 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
-
-        <activity android:name=".PlayerManager"
+        <activity
+            android:name=".PlayerManager"
             android:label="Set Player Name"
-            android:theme="@style/AppTheme"/>
-
-        <activity android:name=".BracketScreen"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BracketScreen"
             android:label="Get Bracket"
             android:theme="@style/AppTheme" />
-        
-        <activity android:name=".SingleElimination"
+        <activity
+            android:name=".SingleElimination"
             android:label="Get Single Elimination"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".HelpScreen"
+        <activity
+            android:name=".HelpScreen"
             android:label="Get Help Screen"
             android:theme="@style/AppTheme" />
         <!-- Splash screen -->
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:label="Get Splash Screen"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
     </application>
 
 </manifest>
