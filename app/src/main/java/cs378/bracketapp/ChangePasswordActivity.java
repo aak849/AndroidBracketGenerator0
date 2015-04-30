@@ -61,7 +61,7 @@ public class ChangePasswordActivity extends ActionBarActivity {
             public void onSuccess() {
                 // password changed
                 Log.d(TAG, "Password successfully changed");
-                Intent i = new Intent(ChangePasswordActivity.this, MainActivity.class);
+                Intent i = new Intent(ChangePasswordActivity.this, LoginActivity.class);
                 startActivity(i);
             }
 
@@ -69,7 +69,7 @@ public class ChangePasswordActivity extends ActionBarActivity {
             public void onError(FirebaseError firebaseError) {
                 // error encountered
                 Log.d(TAG, "Password change failed");
-                Intent i = new Intent(ChangePasswordActivity.this, MainActivity.class);
+                Intent i = new Intent(ChangePasswordActivity.this, LoginActivity.class);
                 startActivity(i);
             }
         });
