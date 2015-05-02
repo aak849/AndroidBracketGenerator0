@@ -126,12 +126,13 @@ public class LoginActivity extends ActionBarActivity {
 
         Firebase rootRef = new Firebase("https://androidbracket.firebaseio.com/");
         Firebase usersRef = rootRef.child("users");
+        usersRef.child(uid).child("email").setValue(email);
 
-        UserObject user = new UserObject(email);
-        Map<String, UserObject> users = new HashMap<String, UserObject>();
-        users.put(uid, user);
-        usersRef.setValue(users);
-        Log.d(TAG, "User added to db");
+//        UserObject user = new UserObject(email);
+//        Map<String, UserObject> users = new HashMap<String, UserObject>();
+//        users.put(uid, user);
+//        usersRef.push().setValue(users);
+//        Log.d(TAG, "User added to db");
 
 
     }

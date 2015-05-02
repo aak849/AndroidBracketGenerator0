@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Development on 5/1/15.
  */
 public class UserObject {
-
+    @JsonProperty("email")
     private String email;
     @JsonProperty("brackets")
     private List<BracketObject> brackets;
