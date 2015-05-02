@@ -136,4 +136,9 @@ public class LoginActivity extends ActionBarActivity {
 
 
     }
+
+    public void onLoginAsGuest(View view) {
+        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(i);
+    }
 }
