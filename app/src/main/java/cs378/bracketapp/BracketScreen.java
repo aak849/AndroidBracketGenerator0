@@ -74,6 +74,10 @@ public class BracketScreen extends Activity {
     public void onSendSingleElimination(View view) {
         Intent getSingleEliminationIntent = new Intent(this, SingleElimination.class);
 
+        Spinner editPlayerNumber = (Spinner) findViewById(R.id.single_elimination_number_of_players_spinner);
+        int numOfPlayers = Integer.parseInt(editPlayerNumber.getSelectedItem().toString());
+        getSingleEliminationIntent.putExtra("numberOfPlayers", numOfPlayers);
+
         //getSingleEliminationIntent.putExtra("numberOfPlayers", R.id.number_of_players_single_elimination);
 
         startActivity(getSingleEliminationIntent);
