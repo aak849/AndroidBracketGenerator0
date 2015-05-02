@@ -13,6 +13,7 @@ import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -59,7 +60,9 @@ public class LoginActivity extends ActionBarActivity {
         ref.createUser(userEmail, userPassword, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
             public void onSuccess(Map<String, Object> result) {
-                Log.d(TAG, "Successfully created user account with uid: " + result.get("uid"));
+                String uid = "" + result.get("uid");
+                Log.d(TAG, "Successfully created user account with uid: " + uid);
+                addUserToDB(userEmail, uid );
                 loginAfterSignUp(userEmail, userPassword);
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
@@ -72,6 +75,7 @@ public class LoginActivity extends ActionBarActivity {
             }
         });
     }
+
 
     public void loginAfterSignUp(String username, String password) {
         Firebase ref = new Firebase("https://androidbracket.firebaseio.com");
@@ -116,5 +120,19 @@ public class LoginActivity extends ActionBarActivity {
     public void onForgotPassword(View view) {
         Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
         startActivity(i);
+    }
+
+    public void addUserToDB(String email, String uid) {
+
+        Firebase rootRef = new Firebase("https://androidbracket.firebaseio.com/");
+        Firebase usersRef = rootRef.child("users");
+
+        UserObject user = new UserObject(email);
+        Map<String, UserObject> users = new HashMap<String, UserObject>();
+        users.put(uid, user);
+        usersRef.setValue(users);
+        Log.d(TAG, "User added to db");
+
+
     }
 }
