@@ -133,6 +133,790 @@
                 android:text="Player 16"
                 android:visibility="gone"/>
 
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_17"
+                android:text="Player 17"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_18"
+                android:text="Player 18"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_19"
+                android:text="Player 19"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_20"
+                android:text="Player 20"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_21"
+                android:text="Player 21"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_22"
+                android:text="Player 22"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_23"
+                android:text="Player 23"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_24"
+                android:text="Player 24"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_25"
+                android:text="Player 25"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_26"
+                android:text="Player 26"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_27"
+                android:text="Player 27"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_28"
+                android:text="Player 28"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_29"
+                android:text="Player 29"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_30"
+                android:text="Player 30"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_31"
+                android:text="Player 31"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_32"
+                android:text="Player 32"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_33"
+                android:text="Player 33"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_34"
+                android:text="Player 34"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_35"
+                android:text="Player 35"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_36"
+                android:text="Player 36"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_37"
+                android:text="Player 37"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_38"
+                android:text="Player 38"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_39"
+                android:text="Player 39"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_40"
+                android:text="Player 40"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_41"
+                android:text="Player 41"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_42"
+                android:text="Player 42"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_43"
+                android:text="Player 43"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_44"
+                android:text="Player 44"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_45"
+                android:text="Player 45"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_46"
+                android:text="Player 46"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_47"
+                android:text="Player 47"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_48"
+                android:text="Player 48"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_49"
+                android:text="Player 49"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_50"
+                android:text="Player 50"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_51"
+                android:text="Player 51"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_52"
+                android:text="Player 52"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_53"
+                android:text="Player 53"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_54"
+                android:text="Player 54"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_55"
+                android:text="Player 55"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_56"
+                android:text="Player 56"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_57"
+                android:text="Player 57"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_58"
+                android:text="Player 58"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_59"
+                android:text="Player 59"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_60"
+                android:text="Player 60"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_61"
+                android:text="Player 61"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_62"
+                android:text="Player 62"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_63"
+                android:text="Player 63"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_64"
+                android:text="Player 64"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_65"
+                android:text="Player 65"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_66"
+                android:text="Player 66"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_67"
+                android:text="Player 67"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_68"
+                android:text="Player 68"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_69"
+                android:text="Player 69"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_70"
+                android:text="Player 70"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_71"
+                android:text="Player 71"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_72"
+                android:text="Player 72"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_73"
+                android:text="Player 73"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_74"
+                android:text="Player 74"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_75"
+                android:text="Player 75"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_76"
+                android:text="Player 76"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_77"
+                android:text="Player 77"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_78"
+                android:text="Player 78"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_79"
+                android:text="Player 79"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_80"
+                android:text="Player 80"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_81"
+                android:text="Player 81"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_82"
+                android:text="Player 82"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_83"
+                android:text="Player 83"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_84"
+                android:text="Player 84"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_85"
+                android:text="Player 85"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_86"
+                android:text="Player 86"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_87"
+                android:text="Player 87"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_88"
+                android:text="Player 88"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_89"
+                android:text="Player 89"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_90"
+                android:text="Player 90"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_91"
+                android:text="Player 91"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_92"
+                android:text="Player 92"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_93"
+                android:text="Player 93"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_94"
+                android:text="Player 94"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_95"
+                android:text="Player 95"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_96"
+                android:text="Player 96"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_97"
+                android:text="Player 97"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_98"
+                android:text="Player 98"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_99"
+                android:text="Player 99"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_100"
+                android:text="Player 100"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_101"
+                android:text="Player 101"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_102"
+                android:text="Player 102"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_103"
+                android:text="Player 103"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_104"
+                android:text="Player 104"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_105"
+                android:text="Player 105"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_106"
+                android:text="Player 106"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_107"
+                android:text="Player 107"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_108"
+                android:text="Player 108"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_109"
+                android:text="Player 109"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_110"
+                android:text="Player 110"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_111"
+                android:text="Player 111"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_112"
+                android:text="Player 112"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_113"
+                android:text="Player 113"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_114"
+                android:text="Player 114"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_115"
+                android:text="Player 115"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_116"
+                android:text="Player 116"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_117"
+                android:text="Player 117"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_118"
+                android:text="Player 118"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_119"
+                android:text="Player 119"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_120"
+                android:text="Player 120"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_121"
+                android:text="Player 121"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_122"
+                android:text="Player 122"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_123"
+                android:text="Player 123"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_124"
+                android:text="Player 124"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_125"
+                android:text="Player 125"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_126"
+                android:text="Player 126"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_127"
+                android:text="Player 127"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name_128"
+                android:text="Player 128"
+                android:visibility="gone"/>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

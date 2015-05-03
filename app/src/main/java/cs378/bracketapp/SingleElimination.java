@@ -23,9 +23,15 @@ public class SingleElimination extends Activity{
         super.onCreate(savedInstanceState);
 
         //setContentView(R.layout.single_elimination_layout);
+        /*
         Intent activityFromBracketScreen = getIntent();
-        //int numOfPlayers;
         numOfPlayers = activityFromBracketScreen.getIntExtra("numberOfPlayers", -1);
+        */
+
+        Bundle extras = getIntent().getBundleExtra("playerBundle");
+        numOfPlayers = extras.getInt("numberOfPlayers");
+        players = extras.getStringArray("playerNames");
+        Log.d(TAG, "number of players: "+numOfPlayers);
         //we get the number that was selected at drop down
 
         //set the number of text views we need
@@ -72,7 +78,9 @@ public class SingleElimination extends Activity{
                 tv[t_index] = (TextView)v1.findViewById(R.id.box);
 
                 //textView.setText("   Player"+counter);
-                tv[t_index].setText("   Player"+counter);
+                //tv[t_index].setText("   Player"+counter);
+                //setting the name using the string array from bundle
+                tv[t_index].setText("   "+players[t_index]);
                 Log.d(TAG, "   Player"+counter);
                 //textView.setTextSize(20);
                 tv[t_index].setTextSize(20);

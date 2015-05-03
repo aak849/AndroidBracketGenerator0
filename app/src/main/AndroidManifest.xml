@@ -37,7 +37,7 @@
         <!-- Splash screen -->
         <activity
             android:name=".Splash"
-            android:label="Get Splash Screen"
+            android:label="BracketApp"
             android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
