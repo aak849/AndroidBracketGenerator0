@@ -1,17 +1,38 @@
 package cs378.bracketapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class SingleElimination extends Activity{
+public class SingleElimination extends ActionBarActivity{
+
+    //sounds we're gonna use
+    private SoundPool mSounds;
+    private int mBracketClickSoundID;
+    private int mBracketWinnerSoundID;
+
+    //Sound settings
+    public enum soundSettings {On, Off};
+    //Current sound settings
+    private soundSettings mSoundSettings = soundSettings.On;
+
+    static final int DIALOG_SOUND_ID = 0;
 
     public String[] players;
     private static final String TAG = "MyActivity";
@@ -21,6 +42,11 @@ public class SingleElimination extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        mSounds = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+//
+//        mBracketClickSoundID = mSounds.load(this, R.raw.bracket_click, 1);
+//        mBracketWinnerSoundID = mSounds.load(this, R.raw.bracket_winner, 1);
 
         //setContentView(R.layout.single_elimination_layout);
         /*
@@ -198,60 +224,92 @@ public class SingleElimination extends Activity{
         //outer.addView(textView);
         outer.addView(tv[t_index]);
 
-//        for(int i=1; i<=numOfPlayers; i++) {
-//            //add the text layout to the parent layout
-//            v = layoutInflater.inflate(R.layout.box, parentLayout, false);
-//            //in order to get the view we have to use the new "box" layout in it
-//            TextView textView = (TextView)v.findViewById(R.id.box);
-//            textView.setText("Player"+i);
-//
-//            //Add the text view to the parent layout
-//            parentLayout.addView(textView);
-//        }
+    }
 
-        /*
-        Bundle extras = getIntent().getBundleExtra("playerBundle");
-        int selectedNumber = extras.getInt("numberOfPlayers");
-        players = extras.getStringArray("playerNames");
-        Log.d(TAG, "selectedNumber =" + selectedNumber);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.single_elimination_menu, menu);
 
-        if(selectedNumber == 16) {
-            setContentView(R.layout.bracket16);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //handle action bar item clicks here
+        switch(item.getItemId()) {
+//            case R.id.action_settings:
+//                return true;
+
+            case R.id.click_sounds:
+                showDialog(DIALOG_SOUND_ID);
+                return true;
         }
 
-        else if(selectedNumber == 8)
-            setContentView(R.layout.bracket8);
-        else if(selectedNumber == 4)
-            setContentView(R.layout.bracket4);
+        return false;
+    }
+    protected Dialog onCreateDialog(int id) {
+        Log.d(TAG, "In onCreateDialog");
+        Dialog dialog = null;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        switch (id) {
+            case DIALOG_SOUND_ID:
+                builder.setTitle("Choose your sound setting: ");
+                final CharSequence[] levels = {
+                        "Sound On",
+                        "Sound Off"};
+                final int selected = getSoundSettings().ordinal();
+                Log.d(TAG, "selected setting value: "+selected+", setting: "+getSoundSettings());
+
+                builder.setSingleChoiceItems(levels, selected,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int item) {
+                                dialog.dismiss(); //close dialog
+
+                                setSoundSettings(soundSettings.values()[item]);
+                                Log.d(TAG, "sound setting: "+getSoundSettings());
+
+                                //Display selected sound setting
+                                Toast.makeText(getApplicationContext(), levels[item], Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                dialog = builder.create();
+                break; //this case
+
+        }
+        if(dialog == null)
+            Log.d(TAG, "No! Dialog is null");
         else
-            setContentView(R.layout.single_elimination_layout);
+            Log.d(TAG, "Dialog created: "+ id + ", dialog: "+dialog);
 
-        TextView textView;
-        StringBuilder textViewName = new StringBuilder();
-        textViewName.append("textView");
-        for(int i = 0; i < selectedNumber; i++)
-        {
-            textViewName.append("" + i);
-            int id = getResources().getIdentifier(textViewName.toString(), "id", getPackageName());
-            if (id != 0) {
-                 textView = (TextView) findViewById(id);
-                 textView.setText(players[i]);
-            }
-                textViewName.deleteCharAt(textViewName.length()-1);
-            if(i>9)
-                textViewName.deleteCharAt(textViewName.length()-1);
+        return dialog;
+    }
+
+    //Getters and Setters
+    public soundSettings getSoundSettings() {return mSoundSettings;}
+    public void setSoundSettings(soundSettings s) {
+        mSoundSettings = s;
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        mSounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
+        mBracketClickSoundID = mSounds.load(this, R.raw.bracket_click, 1);
+        mBracketWinnerSoundID = mSounds.load(this, R.raw.bracket_winner, 1);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "in onPause");
+
+        if(mSounds != null) {
+            mSounds.release();
+            mSounds = null;
         }
-        */
-
-//        Intent activityFromBracketScreen = getIntent();
-//        if(extras != null) {
-//           selectedNumber = extras.getString("selected");
-//            TextView tv = (TextView)findViewById(R.id.single_elimination_title);
-//            tv.setText(selectedNumber);
-//        }
-//
-//        int numOfPlayers = activityFromBracketScreen.getExtras().getInt("numberOfPlayers");
-
     }
 
     public void onNameProgressClick(View view) {
@@ -320,13 +378,20 @@ public class SingleElimination extends Activity{
             //tv[calculatedId].setText(playerName + " " + playerId + " " + numOfPlayers);
             if(calculatedId != -1) {
                 tv[calculatedId].setText(playerName);
+                if(mSoundSettings == soundSettings.On) {
+                    mSounds.play(mBracketClickSoundID, 1, 1, 1, 0, 1);
+                }
             }
 
         }
 
         else {
             tv[tv.length-1].setText(playerName);
+            if(mSoundSettings == soundSettings.On) {
+                mSounds.play(mBracketWinnerSoundID,1,1,1,0,1);
+            }
         }
 
     }
+
 }
