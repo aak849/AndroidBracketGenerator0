@@ -109,15 +109,18 @@ public class LoginActivity extends ActionBarActivity {
         EditText pwEditText = (EditText) findViewById(R.id.password);
         String userEmail = emailEditText.getText().toString();
         String userPassword = pwEditText.getText().toString();
+        final GlobalState globalState = (GlobalState) getApplicationContext();
         ref.authWithPassword(userEmail, userPassword, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
+                globalState.setUid(authData.getUid());
                 Log.d(TAG,"User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 Bundle loginBundle = new Bundle();
                 loginBundle.putString("uid", authData.getUid());
                 i.putExtra("loginBundle",loginBundle);
                 //i.putExtra("uid", authData.getUid());
+
                 retrievePreviouslyCreatedBrackets(authData.getUid());
 
                 startActivity(i);
@@ -134,7 +137,7 @@ public class LoginActivity extends ActionBarActivity {
     public void retrievePreviouslyCreatedBrackets(String uid) {
         Firebase userRef = new Firebase("https://androidbracket.firebaseio.com/users/" + uid + "/brackets");
         final GlobalState globalState = (GlobalState) getApplicationContext();
-        globalState.setUid(uid);
+        //globalState.setUid(uid);
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
