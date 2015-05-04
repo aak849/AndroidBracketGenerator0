@@ -84,6 +84,10 @@ public class LoginActivity extends ActionBarActivity {
             public void onAuthenticated(AuthData authData) {
                 Log.d(TAG,"User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                Bundle loginBundle = new Bundle();
+                loginBundle.putString("uid", authData.getUid());
+                i.putExtra("loginBundle",loginBundle);
+                //i.putExtra("uid", authData.getUid());
                 startActivity(i);
             }
 
@@ -106,6 +110,10 @@ public class LoginActivity extends ActionBarActivity {
             public void onAuthenticated(AuthData authData) {
                 Log.d(TAG,"User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                Bundle loginBundle = new Bundle();
+                loginBundle.putString("uid", authData.getUid());
+                i.putExtra("loginBundle",loginBundle);
+                //i.putExtra("uid", authData.getUid());
                 startActivity(i);
             }
 
@@ -139,6 +147,9 @@ public class LoginActivity extends ActionBarActivity {
 
     public void onLoginAsGuest(View view) {
         Intent i = new Intent(LoginActivity.this, MainActivity.class);
+        Bundle loginBundle = new Bundle();
+        loginBundle.putString("uid", "nouid");
+        i.putExtra("loginBundle",loginBundle);
         startActivity(i);
     }
 }

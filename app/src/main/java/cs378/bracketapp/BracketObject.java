@@ -11,10 +11,11 @@ import java.util.Map;
  */
 public class BracketObject {
 
-
+    @JsonProperty("numPlayers")
     private int numPlayers;
-    @JsonProperty("players")
+    @JsonProperty("playerNames")
     private List<String> players;
+    @JsonProperty("tournamentType")
     private String tournamentType;
 
     public BracketObject(int n, String t)

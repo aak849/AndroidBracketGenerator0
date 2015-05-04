@@ -49,8 +49,8 @@ public class MainActivity extends ActionBarActivity {
         Intent getBracketScreenIntent = new Intent(this, BracketScreen.class);
 
         final int result = 1;
-
-        //getBracketScreenIntent.putExtra("numberOfPlayers", 4);
+        Bundle loginBundle = getIntent().getBundleExtra("loginBundle");
+        getBracketScreenIntent.putExtra("loginBundle", loginBundle);
 
         startActivity(getBracketScreenIntent);
 
