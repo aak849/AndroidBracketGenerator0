@@ -59,6 +59,17 @@ public class MainActivity extends ActionBarActivity {
                         TableRow tr = new TableRow(getApplicationContext());
                         Button b = new Button(getApplicationContext());
                         b.setText("Bracket #" + begin);
+                        b.setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                // TODO Auto-generated method stub
+                                //System.out.println("v.getid is:- " + v.getId());
+                                Log.d(TAG, "On click listener working");
+                            }
+                        });
+
+
                         tr.addView(b);
                         tl.addView(tr);
                         begin++;
