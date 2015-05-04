@@ -133,13 +133,13 @@ public class LoginActivity extends ActionBarActivity {
 
     public void retrievePreviouslyCreatedBrackets(String uid) {
         Firebase userRef = new Firebase("https://androidbracket.firebaseio.com/users/" + uid + "/brackets");
-        //final GlobalState globalState = (GlobalState) getApplicationContext();
-        //globalState.setUid(uid);
+        final GlobalState globalState = (GlobalState) getApplicationContext();
+        globalState.setUid(uid);
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 Map<String, Object> usersBrackets = (Map<String, Object>) snapshot.getValue();
-                //globalState.setUserBrackets(usersBrackets);
+                globalState.setUserBrackets(usersBrackets);
                 for(String key : usersBrackets.keySet())
                 {
                     //BracketObject bracket = (BracketObject)o;
