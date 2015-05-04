@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.firebase.client.AuthData;
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -64,6 +66,7 @@ public class LoginActivity extends ActionBarActivity {
                 Log.d(TAG, "Successfully created user account with uid: " + uid);
                 addUserToDB(userEmail, uid );
                 loginAfterSignUp(userEmail, userPassword);
+                //retrievePreviouslyCreatedBrackets(uid);
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
             }
@@ -75,6 +78,7 @@ public class LoginActivity extends ActionBarActivity {
             }
         });
     }
+
 
 
     public void loginAfterSignUp(String username, String password) {
@@ -114,6 +118,8 @@ public class LoginActivity extends ActionBarActivity {
                 loginBundle.putString("uid", authData.getUid());
                 i.putExtra("loginBundle",loginBundle);
                 //i.putExtra("uid", authData.getUid());
+                retrievePreviouslyCreatedBrackets(authData.getUid());
+
                 startActivity(i);
             }
 
@@ -121,6 +127,31 @@ public class LoginActivity extends ActionBarActivity {
             public void onAuthenticationError(FirebaseError firebaseError) {
                 // there was an error
                 Log.d(TAG, "Login attempt failed");
+            }
+        });
+    }
+
+    public void retrievePreviouslyCreatedBrackets(String uid) {
+        Firebase userRef = new Firebase("https://androidbracket.firebaseio.com/users/" + uid + "/brackets");
+        //final GlobalState globalState = (GlobalState) getApplicationContext();
+        //globalState.setUid(uid);
+        userRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                Map<String, Object> usersBrackets = (Map<String, Object>) snapshot.getValue();
+                //globalState.setUserBrackets(usersBrackets);
+                for(String key : usersBrackets.keySet())
+                {
+                    //BracketObject bracket = (BracketObject)o;
+                    Map<String, Object> eachBracket = (Map<String, Object>) usersBrackets.get(key);
+                    Log.d(TAG, "This thing works yuhhhh " + eachBracket.get("numPlayers"));
+
+                }
+                System.out.println(snapshot.getValue());
+            }
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                Log.d(TAG, "The read failed: " + firebaseError.getMessage());
             }
         });
     }
