@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -16,6 +18,8 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 
@@ -50,30 +54,71 @@ public class MainActivity extends ActionBarActivity {
             public void onDataChange(DataSnapshot snapshot) {
                 Map<String, Object> usersBrackets = (Map<String, Object>) snapshot.getValue();
                 globalState.setUserBrackets(usersBrackets);
+                List<String> list = new ArrayList<String>();
+                for(String key : usersBrackets.keySet())
+                {
+                    list.add(key);
+                    //BracketObject bracket = (BracketObject)o;
+                    //Map<String, Object> eachBracket = (Map<String, Object>) usersBrackets.get(key);
+                    //Log.d(TAG, "This thing works yuhhhh " + eachBracket.get("numPlayers"));
+
+                }
+                globalState.setBracketKeys(list);
                 TableLayout tl = (TableLayout) findViewById(R.id.previousBrackets);
-
-                int begin = 1;
+                int buttonsCreated = globalState.getButtonsCreated();
+                int begin = 0;
                 int end = usersBrackets.size();
+
+                if(buttonsCreated != 0 && end != 0)
+                    begin = end - 1;
+
                 if(end != 0) {
-                    while (begin <= end) {
-                        TableRow tr = new TableRow(getApplicationContext());
-                        Button b = new Button(getApplicationContext());
-                        b.setText("Bracket #" + begin);
-                        b.setOnClickListener(new View.OnClickListener() {
+                    while (begin < end) {
+                            TableRow tr = new TableRow(getApplicationContext());
+                            Button b = new Button(getApplicationContext());
+                            b.setText("Bracket #" + begin);
 
-                            @Override
-                            public void onClick(View v) {
-                                // TODO Auto-generated method stub
-                                //System.out.println("v.getid is:- " + v.getId());
-                                Log.d(TAG, "On click listener working");
-                            }
-                        });
+                            int num = begin;
+                            b.setId(begin);//Integer.parseInt(list.get(begin)));
+                            b.setOnClickListener(new View.OnClickListener() {
+
+                                @Override
+                                public void onClick(View v) {
+                                    // TODO Auto-generated method stub
+                                    //System.out.println("v.getid is:- " + v.getId());
+                                    Log.d(TAG, "On click listener working");
+                                    final GlobalState globalState = (GlobalState) getApplicationContext();
+                                    Map<String, Object> userBrackets = globalState.getUserBrackets();
+                                    List<String> bracketKeys = globalState.getBracketKeys();
+                                    Intent getSingleEliminationIntent = new Intent(getApplicationContext(), SingleElimination.class);
+                                    LinearLayout layout = (LinearLayout) findViewById(R.id.player_layout);
+                                    Bundle playerBundle = new Bundle();
+//                                // Places all of the player names into a String Array
+                                    Map<String, Object> thisBracket = (Map<String, Object>) userBrackets.get(bracketKeys.get(v.getId()));
+                                    List<String> players = (List<String>) thisBracket.get("playerNames");
+                                    int numPlayers = players.size();//Integer.parseInt((String)thisBracket.get("numPlayers"));
+                                    String[] playerNames = new String[numPlayers];
+                                    for (int i = 0; i < numPlayers; i++) {
+//                                    //EditText tempText = (EditText) layout.getChildAt(i);
+                                        playerNames[i] = players.get(i);//tempText.getText().toString();
+//                                    //players.add(playerNames[i]);
+                                    }
+                                    playerBundle.putStringArray("playerNames", playerNames);
+                                    playerBundle.putInt("numberOfPlayers", numPlayers);
+                                    getSingleEliminationIntent.putExtra("playerBundle", playerBundle);
+                                    startActivity(getSingleEliminationIntent);
+
+                                }
+                            });
 
 
-                        tr.addView(b);
-                        tl.addView(tr);
-                        begin++;
+                            tr.addView(b);
+                            tl.addView(tr);
+                            begin++;
+                            buttonsCreated++;
                     }
+
+
                     for (String key : usersBrackets.keySet()) {
                         //BracketObject bracket = (BracketObject)o;
                         Map<String, Object> eachBracket = (Map<String, Object>) usersBrackets.get(key);
@@ -82,6 +127,7 @@ public class MainActivity extends ActionBarActivity {
                     }
                     System.out.println(snapshot.getValue());
                 }
+                globalState.setButtonsCreated(buttonsCreated);
             }
             @Override
             public void onCancelled(FirebaseError firebaseError) {

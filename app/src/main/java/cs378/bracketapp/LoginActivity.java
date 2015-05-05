@@ -15,7 +15,9 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -25,6 +27,9 @@ public class LoginActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final GlobalState globalState = (GlobalState) getApplicationContext();
+        //List<Boolean> list = new ArrayList<Boolean>();
+        globalState.setButtonsCreated(0);
         setContentView(R.layout.activity_login);
         Firebase.setAndroidContext(this);
 
@@ -147,7 +152,9 @@ public class LoginActivity extends ActionBarActivity {
                 {
                     //BracketObject bracket = (BracketObject)o;
                     Map<String, Object> eachBracket = (Map<String, Object>) usersBrackets.get(key);
+                    List<String> players = (List<String>) eachBracket.get("playerNames");
                     Log.d(TAG, "This thing works yuhhhh " + eachBracket.get("numPlayers"));
+                    Log.d(TAG, "Player 1=yuh " + players.get(0) );
 
                 }
                 System.out.println(snapshot.getValue());
