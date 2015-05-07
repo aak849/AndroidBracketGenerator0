@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.firebase.client.AuthData;
 import com.firebase.client.DataSnapshot;
@@ -19,10 +20,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class LoginActivity extends ActionBarActivity {
     private static final String TAG = "MyActivity";
+    private static final String EMAIL_PATTERN =
+            "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +70,16 @@ public class LoginActivity extends ActionBarActivity {
         EditText pwEditText = (EditText) findViewById(R.id.password);
         final String userEmail = emailEditText.getText().toString();
         final String userPassword = pwEditText.getText().toString();
+        // Verify that this email is a valid email address
+        if(!verifyValidEmail(userEmail))
+        {
+            TextView invalidEmail = (TextView) findViewById(R.id.invalidEmail);
+            invalidEmail.setVisibility(View.VISIBLE);
+            return;
+        }
+        // Remove this once a valid email is given
+        TextView invalidEmail = (TextView) findViewById(R.id.invalidEmail);
+        invalidEmail.setVisibility(View.GONE);
         ref.createUser(userEmail, userPassword, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
             public void onSuccess(Map<String, Object> result) {
@@ -192,5 +208,14 @@ public class LoginActivity extends ActionBarActivity {
         loginBundle.putString("uid", "nouid");
         i.putExtra("loginBundle",loginBundle);
         startActivity(i);
+    }
+
+    public boolean verifyValidEmail(String email)
+    {
+        Pattern pattern;
+        Matcher matcher;
+        pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

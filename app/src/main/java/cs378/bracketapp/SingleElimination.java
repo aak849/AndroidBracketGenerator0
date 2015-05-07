@@ -423,4 +423,10 @@ public class SingleElimination extends ActionBarActivity{
         return calculatedId;
     }
 
+    public void onReturnHome(View v) {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 }
