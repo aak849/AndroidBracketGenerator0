@@ -13,7 +13,7 @@ import android.widget.Spinner;
 
 public class BracketScreen extends Activity {
     Spinner single_elimination_spinner;
-    Spinner other_spinner;
+    //Spinner other_spinner;
     private static final String TAG = "MyActivity";
 
     //Spinner spinner;
@@ -51,11 +51,11 @@ public class BracketScreen extends Activity {
         });
         */
 
-        other_spinner = (Spinner) findViewById(R.id.other_number_of_players_spinner);
+       // other_spinner = (Spinner) findViewById(R.id.other_number_of_players_spinner);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.not_supported_array,
                 android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        other_spinner.setAdapter(adapter2);
+        //other_spinner.setAdapter(adapter2);
 
         Intent activityFromMain = getIntent();
 
